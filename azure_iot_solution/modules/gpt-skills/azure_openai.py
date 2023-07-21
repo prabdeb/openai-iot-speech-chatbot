@@ -35,6 +35,7 @@ def generate_chat_completion(messages: List[Dict[str, str]], **kwargs) -> str:
         engine=os.getenv("AZURE_OPENAI_CHATBOT_MODEL", None),
         messages=messages,
         api_version=os.getenv("AZURE_OPENAI_API_VERSION", None),
+        timeout=10,
         **kwargs,
     )
 
