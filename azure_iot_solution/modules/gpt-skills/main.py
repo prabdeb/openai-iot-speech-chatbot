@@ -28,7 +28,16 @@ class StatusLock:
         return self._status
 
 app = FastAPI()
-VALID_INTENTS = ['general_greetings', 'weather_check', 'news_check', 'e_commerce_search', 'story_telling', 'general_knowledge', 'any_other']
+VALID_INTENTS = [
+    'general_greetings',
+    'weather_check',
+    'news_check',
+    'e_commerce_search',
+    'story_telling',
+    'general_knowledge',
+    'any_other',
+    'multiturn'
+]
 running_status = StatusLock()
 
 @app.get("/")
@@ -44,7 +53,7 @@ async def itenet(q: str = ""):
             return {"message": "No question was asked."}
         logger.info(f"Question: {q}")
         intent_with_context = get_intent(q)
-        intent, entities = _parse_intent_with_context(intent_with_context)
+        intent, entities = _parse_intent_with_context(q, intent_with_context)
         logger.info(f"Intent: {intent}")
         logger.info(f"Entities: {entities}")
         if intent not in VALID_INTENTS:
@@ -82,15 +91,28 @@ def _route(question: str, intent: str, entities: str):
         return get_general_knowledge(question)
     elif intent == "any_other":
         return get_any_other()
+    elif intent == "multiturn":
+        return entities
     else:
         raise ValueError(f"Invalid intent: {intent}")
 
-def _parse_intent_with_context(intent_answer: str) -> List[str]:
-  intent_answer = intent_answer.replace("\n", " ")
-  intent = intent_answer.split("intent: ")[1].split(" entities:")[0]
-  entities = intent_answer.split(" entities: ")[1]
+def _parse_intent_with_context(question: str, intent_answer: str) -> List[str]:
+    intent_answer = intent_answer.replace("\n", " ")
+    logger.info(f"Intent answer: {intent_answer}")
+    try:
+        intent = intent_answer.split("intent: ")[1].split(" entities:")[0]
+        # Remove . from the intent
+        intent = intent.replace(".", "")
+    except IndexError:
+        intent = "multiturn"
+        entities = intent_answer
+        return [intent, entities]
+    try:
+        entities = intent_answer.split(" entities: ")[1]
+    except IndexError:
+        entities = question
 
-  return [intent, entities]
+    return [intent, entities]
 
 
 if __name__ == "__main__":

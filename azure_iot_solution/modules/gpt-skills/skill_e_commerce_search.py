@@ -1,5 +1,11 @@
 from azure_openai import generate_chat_completion, check_if_openai_is_initialized, initialize_openai, parse_prompt_gpt_35
 import requests, os
+import logging
+
+logger = logging.getLogger("uvicorn")
+ch = logging.StreamHandler()
+ch.setLevel(logging.INFO)
+logger.addHandler(ch)
 
 def get_e_commerce_search(question: str, entities: str) -> str:
     """Get general knowledge from text"""

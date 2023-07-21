@@ -4,10 +4,12 @@ import wave
 import pocketsphinx as ps
 import pyaudio
 import RPi.GPIO as GPIO
+import requests
 from stt import recognize_from_microphone
 from tts import speak
 
 tmp_audio_file = "tmp.wav"
+gpt_skill_endpoint = os.getenv("GPT_SKILL_ENDPOINT", "http://localhost:8000")
 
 class MicrophoneThread(threading.Thread):
     SAMPLE_RATE = 44100
@@ -72,7 +74,10 @@ class MicrophoneThread(threading.Thread):
 
                 text = recognize_from_microphone(tmp_audio_file)
                 if text:
-                    speak(text)
+                    gpt_response = self._call_gpt_skill(text)
+                    print("GPT Response: {}".format(gpt_response))
+                    if gpt_response:
+                        speak(gpt_response)
 
                 # Reset audio frames.
                 audio_frames = []
@@ -88,3 +93,13 @@ class MicrophoneThread(threading.Thread):
 
         # Return 'default' sound device, if found.
         return index
+
+    def _call_gpt_skill(self, question: str) -> str:
+        """Call GPT skill"""
+        response = requests.get(f"{gpt_skill_endpoint}/gpt/itenet?q={question}")
+        return response.json()["message"]
+
+    def _get_gpt_skill_status(self) -> str:
+        """Get GPT skill status"""
+        response = requests.get(f"{gpt_skill_endpoint}/gpt/status")
+        return response.json()["message"]

@@ -1,6 +1,12 @@
 from azure_openai import generate_chat_completion, check_if_openai_is_initialized, initialize_openai, parse_prompt_gpt_35
 import requests, os
 import datetime
+import logging
+
+logger = logging.getLogger("uvicorn")
+ch = logging.StreamHandler()
+ch.setLevel(logging.INFO)
+logger.addHandler(ch)
 
 def get_weather_check(entities: str) -> str:
     """Get general knowledge from text"""
@@ -8,7 +14,7 @@ def get_weather_check(entities: str) -> str:
         initialize_openai()
     weather_context = _get_open_weather_map(entities)
     messages = parse_prompt_gpt_35("./prompts/weather_check.txt",
-                                   general_context=weather_context)
+                                   weather_context=weather_context)
     return generate_chat_completion(
         messages=messages,
         max_tokens=100,
@@ -19,6 +25,7 @@ def _get_open_weather_map(entities: str) -> str:
   api_key = os.getenv("OPEN_WEATHER_MAP_API_KEY", "")
   base_url = "http://api.openweathermap.org/data/2.5/forecast?"
   complete_url = base_url + "appid=" + api_key + "&q=" + entities
+  logger.info(f"Complete URL: {complete_url}")
   response = requests.get(complete_url)
   content = response.json()
   weather_context = ""

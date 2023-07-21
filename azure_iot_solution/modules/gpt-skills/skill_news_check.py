@@ -1,6 +1,12 @@
 from azure_openai import generate_chat_completion, check_if_openai_is_initialized, initialize_openai, parse_prompt_gpt_35
 import requests, os
 import datetime
+import logging
+
+logger = logging.getLogger("uvicorn")
+ch = logging.StreamHandler()
+ch.setLevel(logging.INFO)
+logger.addHandler(ch)
 
 def get_news_check(question: str, entities: str) -> str:
     """Get general knowledge from text"""
@@ -16,7 +22,6 @@ def get_news_check(question: str, entities: str) -> str:
     ).choices[0]["message"]["content"] # type: ignore
 
 def _get_news_context(question: str, entities: str) -> str:
-  entities = question
   subscription_key = os.getenv("AZURE_BING_SEARCH_API_KEY", "")
   endpoint = os.getenv("AZURE_BING_SEARCH_ENDPOINT", "")
   mkt = 'en-US'
