@@ -97,7 +97,6 @@ class MicrophoneThread(threading.Thread):
                 print("Stopping speech synthesizer ...")
                 speech_synthesizer.stop_speaking()
                 speech_synthesizer = None
-                print("Waiting for user to press the touch button ...")
 
     def get_audio_device(self, p):
         index = 0
