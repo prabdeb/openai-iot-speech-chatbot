@@ -7,6 +7,7 @@ import RPi.GPIO as GPIO
 import requests
 from stt import recognize_from_microphone
 from tts import speak
+import azure.cognitiveservices.speech as speechsdk
 
 tmp_audio_file = "tmp.wav"
 gpt_skill_endpoint = os.getenv("GPT_SKILL_ENDPOINT", "http://localhost:8000")
@@ -18,6 +19,7 @@ class MicrophoneThread(threading.Thread):
     WIDTH = 2
     CHANNELS = 1
     TOUCH_BUTTON = 2
+    STOP_PIN_BUTTON = 3
 
     def __init__(self, callback):
         threading.Thread.__init__(self, target=self.run)
@@ -26,6 +28,7 @@ class MicrophoneThread(threading.Thread):
 
         GPIO.setmode(GPIO.BCM) # type: ignore
         GPIO.setup(self.TOUCH_BUTTON, GPIO.IN) # type: ignore
+        GPIO.setup(self.STOP_PIN_BUTTON, GPIO.IN) # type: ignore
 
     def stop(self):
         self._stop_event.set()
@@ -53,6 +56,7 @@ class MicrophoneThread(threading.Thread):
 
     def process_mic(self, mic):
         audio_frames = []
+        speech_synthesizer = None
         while not self.stopped():
             # Capture audio while the TOUCH_BUTTON is held.
             if GPIO.input(self.TOUCH_BUTTON): # type: ignore
@@ -77,10 +81,18 @@ class MicrophoneThread(threading.Thread):
                     gpt_response = self._call_gpt_skill(text)
                     print("GPT Response: {}".format(gpt_response))
                     if gpt_response:
-                        speak(gpt_response)
+                        print("Speaking ...")
+                        speech_synthesizer = speak(gpt_response)
 
                 # Reset audio frames.
                 audio_frames = []
+
+            # Stop the speech synthesizer if the STOP_PIN_BUTTON is pressed.
+            elif GPIO.input(self.STOP_PIN_BUTTON) and speech_synthesizer: # type: ignore
+                print("Stopping speech synthesizer ...")
+                speech_synthesizer.stop_speaking()
+                speech_synthesizer = None
+
 
     def get_audio_device(self, p):
         index = 0
