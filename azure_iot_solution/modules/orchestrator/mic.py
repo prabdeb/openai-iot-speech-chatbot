@@ -25,6 +25,7 @@ class MicrophoneThread(threading.Thread):
         threading.Thread.__init__(self, target=self.run)
         self._stop_event = threading.Event()
         self._callback = callback
+        self._is_speaking = False
 
         GPIO.setmode(GPIO.BCM) # type: ignore
         GPIO.setup(self.TOUCH_BUTTON, GPIO.IN) # type: ignore
@@ -57,9 +58,10 @@ class MicrophoneThread(threading.Thread):
     def process_mic(self, mic):
         audio_frames = []
         speech_synthesizer = None
+        print("Waiting for user to press the touch button ...")
         while not self.stopped():
             # Capture audio while the TOUCH_BUTTON is held.
-            if GPIO.input(self.TOUCH_BUTTON): # type: ignore
+            if GPIO.input(self.TOUCH_BUTTON) and self._is_speaking == False: # type: ignore
                 if len(audio_frames) == 0:
                     print("Listening ...")
 
@@ -76,13 +78,16 @@ class MicrophoneThread(threading.Thread):
                 waveFile.writeframes(b''.join(audio_frames)) # type: ignore
                 waveFile.close()
 
+                # Call GPT skill.
                 text = recognize_from_microphone(tmp_audio_file)
                 if text:
                     gpt_response = self._call_gpt_skill(text)
                     print("GPT Response: {}".format(gpt_response))
                     if gpt_response:
                         print("Speaking ...")
+                        self._is_speaking = True
                         speech_synthesizer = speak(gpt_response)
+                        speech_synthesizer.synthesis_completed.connect(self.speech_synthesizer_synthesis_completed_cb)
 
                 # Reset audio frames.
                 audio_frames = []
@@ -92,7 +97,7 @@ class MicrophoneThread(threading.Thread):
                 print("Stopping speech synthesizer ...")
                 speech_synthesizer.stop_speaking()
                 speech_synthesizer = None
-
+                print("Waiting for user to press the touch button ...")
 
     def get_audio_device(self, p):
         index = 0
@@ -115,3 +120,7 @@ class MicrophoneThread(threading.Thread):
         """Get GPT skill status"""
         response = requests.get(f"{gpt_skill_endpoint}/gpt/status")
         return response.json()["message"]
+
+    def speech_synthesizer_synthesis_completed_cb(self, evt: speechsdk.SessionEventArgs):
+        print("Waiting for user to press the touch button ...")
+        self._is_speaking = False
