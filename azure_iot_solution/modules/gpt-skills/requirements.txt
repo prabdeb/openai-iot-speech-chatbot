@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+openai==0.27.8
+tiktoken==0.3.3
+retry~=0.9.2
