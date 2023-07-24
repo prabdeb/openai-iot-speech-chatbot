@@ -14,7 +14,7 @@ def get_e_commerce_search(question: str, entities: str) -> str:
     products_context = _get_products_context(entities)
     messages = parse_prompt_gpt_35("./prompts/e_commerce_search.txt",
                                    products_context=products_context,
-                                   query=question)
+                                   question=question)
     return generate_chat_completion(
         messages=messages,
         max_tokens=300,

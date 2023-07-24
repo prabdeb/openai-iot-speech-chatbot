@@ -9,5 +9,5 @@ Products:
 {{products_context}}
 
 user:
-{{query}}
+{{question}}
 assistant:

@@ -14,7 +14,8 @@ def get_news_check(question: str, entities: str) -> str:
         initialize_openai()
     news_context = _get_news_context(question, entities)
     messages = parse_prompt_gpt_35("./prompts/news_check.txt",
-                                   news_context=news_context)
+                                   news_context=news_context,
+                                   question=question,)
     return generate_chat_completion(
         messages=messages,
         max_tokens=300,
@@ -24,7 +25,7 @@ def get_news_check(question: str, entities: str) -> str:
 def _get_news_context(question: str, entities: str) -> str:
   subscription_key = os.getenv("AZURE_BING_SEARCH_API_KEY", "")
   endpoint = os.getenv("AZURE_BING_SEARCH_ENDPOINT", "")
-  mkt = 'en-US'
+  mkt = 'en-IN'
   params = { 'q': entities, 'mkt': mkt }
   headers = { 'Ocp-Apim-Subscription-Key': subscription_key }
   endpoint = endpoint + "/v7.0/news/search"

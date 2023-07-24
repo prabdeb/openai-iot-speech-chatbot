@@ -78,15 +78,15 @@ async def status():
 
 def _route(question: str, intent: str, entities: str):
     if intent == "general_greetings":
-        return get_general_greetings(entities)
+        return get_general_greetings(question, entities)
     elif intent == "weather_check":
-        return get_weather_check(entities)
+        return get_weather_check(question, entities)
     elif intent == "news_check":
         return get_news_check(question, entities)
     elif intent == "e_commerce_search":
         return get_e_commerce_search(question, entities)
     elif intent == "story_telling":
-        return get_story_telling(entities)
+        return get_story_telling(question, entities)
     elif intent == "general_knowledge":
         return get_general_knowledge(question)
     elif intent == "any_other":
