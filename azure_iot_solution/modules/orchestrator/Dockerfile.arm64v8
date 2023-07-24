@@ -1,0 +1,42 @@
+# FROM resin/rpi-raspbian:stretch
+FROM python:3.10.12-slim-bullseye
+
+WORKDIR /app
+
+# ENV PYTHONUNBUFFERED=1
+
+# RUN apt-get update && apt-get install -y \
+#         git \
+#         python3 \
+#         python3-pip \
+#         python3-dev \
+#         wget \
+#         swig \
+#         build-essential \
+#         i2c-tools \
+#         libpulse-dev \
+#         libboost-python1.62.0 \
+#         libasound2-dev \
+#         libopenjp2-7-dev \
+#         libjpeg-dev \
+#         portaudio19-dev \
+#         python-pyaudio \
+#         python-pil \
+#         python-requests \
+#         python-pocketsphinx \
+#         pocketsphinx
+
+RUN apt-get update && apt-get install -y \
+        gcc \
+        portaudio19-dev \
+        python3-pyaudio
+
+COPY requirements.txt ./
+
+RUN pip3 install --upgrade pip
+RUN pip3 install --upgrade setuptools
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD ["python3", "-u", "main.py"]
