@@ -101,8 +101,8 @@ def _parse_intent_with_context(question: str, intent_answer: str) -> List[str]:
     logger.info(f"Intent answer: {intent_answer}")
     try:
         intent = intent_answer.split("intent: ")[1].split(" entities:")[0]
-        # Remove . from the intent
         intent = intent.replace(".", "")
+        intent = "".join(intent.split())
     except IndexError:
         intent = "multiturn"
         entities = intent_answer
