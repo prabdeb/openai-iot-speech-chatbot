@@ -1,0 +1,585 @@
+﻿line_number,question,variant_id,status,result,ground_truth,answer,f1_score
+"0","Hi","variant_0","Completed","intent: general_greetings","intent: general_greetings","intent: general_greetings","1"
+"1","Hello","variant_0","Completed","intent: general_greetings","intent: general_greetings","intent: general_greetings","1"
+"2","What's the weather like in Mumbai today?","variant_0","Completed","intent: weather_check
+entities: Mumbai","intent: weather_check, entities: Mumbai","intent: weather_check
+entities: Mumbai","1"
+"3","Will it rain in Chennai?","variant_0","Completed","intent: weather_check
+entities: Chennai","intent: weather_check, entities: Chennai","intent: weather_check
+entities: Chennai","1"
+"4","What is the weather forecast for Kolkata?","variant_0","Completed","intent: weather_check
+entities: Kolkata","intent: weather_check, entities: Kolkata","intent: weather_check
+entities: Kolkata","1"
+"5","Can you tell me the latest news?","variant_0","Completed","intent: news_check","intent: news_check","intent: news_check","1"
+"6","What are the news headlines today?","variant_0","Completed","intent: news_check","intent: news_check","intent: news_check","1"
+"7","I want to buy a laptop.","variant_0","Completed","intent: e_commerce_search
+entities: laptop","intent: e_commerce_search, entities: laptop","intent: e_commerce_search
+entities: laptop","1"
+"8","Show me mobile phones under 10000.","variant_0","Completed","intent: e_commerce_search
+entities: mobile phones, 10000","intent: e_commerce_search, entities: mobile under 10000","intent: e_commerce_search
+entities: mobile phones, 10000","0.8333333333333334"
+"9","Where can I buy a camera online?","variant_0","Completed","intent: e_commerce_search
+entities: camera","intent: e_commerce_search, entities: camera","intent: e_commerce_search
+entities: camera","1"
+"10","Tell me a story about a dragon.","variant_0","Completed","intent: story_telling
+entities: a dragon","intent: story_telling, entities: dragon","intent: story_telling
+entities: a dragon","1"
+"11","Once upon a time,  there was a brave knight.","variant_0","Completed","I'm sorry, could you please clarify what you want me to do with this sentence?","intent: story_telling, entities: knight","I'm sorry, could you please clarify what you want me to do with this sentence?","0"
+"12","Who is the first president of the USA?","variant_0","Completed","intent: general_knowledge
+entities: the first president of the USA","intent: general_knowledge, entities: USA,  president","intent: general_knowledge
+entities: the first president of the USA","0.8333333333333333"
+"13","What is the capital of France?","variant_0","Completed","intent: general_knowledge
+entities: France","intent: general_knowledge, entities: France,  capital","intent: general_knowledge
+entities: France","0.888888888888889"
+"14","What is your name?","variant_0","Completed","intent: any_other
+entities: None","intent: any_other","intent: any_other
+entities: None","0.6666666666666666"
+"15","What time does the nearest restaurant open?","variant_0","Completed","intent: any_other
+entities: nearest restaurant, open, time. However, it seems like the intent is about finding the opening time of the restaurant, so I can suggest a better way of asking this question like ""What are the opening hours of the nearest restaurant?"" to make the intent clearer.","intent: any_other, entities: restaurant","intent: any_other
+entities: nearest restaurant, open, time. However, it seems like the intent is about finding the opening time of the restaurant, so I can suggest a better way of asking this question like ""What are the opening hours of the nearest restaurant?"" to make the intent clearer.","0.17777777777777776"
+"16","Tell me a joke.","variant_0","Completed","intent: any_other
+entities: None (This intent is not covered in the above categories)","intent: any_other","intent: any_other
+entities: None (This intent is not covered in the above categories)","0.2857142857142857"
+"17","Can you recommend a good book to read?","variant_0","Completed","intent: any_other
+entities: None (this query is too general)","intent: any_other, entities: book","intent: any_other
+entities: None (this query is too general)","0.46153846153846156"
+"18","What is the temperature in Bangalore?","variant_0","Completed","intent: weather_check
+entities: Bangalore","intent: weather_check, entities: Bangalore","intent: weather_check
+entities: Bangalore","1"
+"19","What's the news on technology?","variant_0","Completed","intent: news_check
+entities: technology","intent: news_check, entities: technology","intent: news_check
+entities: technology","1"
+"20","Suggest a budget-friendly mobile phone.","variant_0","Completed","intent: e_commerce_search
+entities: budget-friendly mobile phone","intent: e_commerce_search, entities: mobile","intent: e_commerce_search
+entities: budget-friendly mobile phone","0.8"
+"21","Tell me a story about an adventure.","variant_0","Completed","intent: story_telling
+entities: adventure","intent: story_telling, entities: adventure","intent: story_telling
+entities: adventure","1"
+"22","Who discovered gravity?","variant_0","Completed","intent: general_knowledge
+entities: gravity","intent: general_knowledge, entities: gravity","intent: general_knowledge
+entities: gravity","1"
+"23","What is the population of China?","variant_0","Completed","intent: general_knowledge
+entities: China","intent: general_knowledge, entities: China,  population","intent: general_knowledge
+entities: China","0.888888888888889"
+"24","How are you?","variant_0","Completed","intent: general_greetings","intent: general_greetings","intent: general_greetings","1"
+"50","Who was the first person to reach the South Pole?","variant_0","Completed","intent: general_knowledge
+entities: first person, South Pole","intent: general_knowledge, entities: South Pole","intent: general_knowledge
+entities: first person, South Pole","0.8333333333333333"
+"51","What is the national flower of India?","variant_0","Completed","intent: general_knowledge
+entities: national flower of India","intent: general_knowledge, entities: India,  national flower","intent: general_knowledge
+entities: national flower of India","0.923076923076923"
+"52","What's your favorite color?","variant_0","Completed","intent: any_other","intent: any_other","intent: any_other","1"
+"53","How far is the nearest grocery store from here?","variant_0","Completed","intent: e_commerce_search
+entities: nearest grocery store","intent: any_other, entities: grocery store","intent: e_commerce_search
+entities: nearest grocery store","0.7272727272727272"
+"54","Do you have any hobbies?","variant_0","Completed","intent: any_other
+entities: none","intent: any_other","intent: any_other
+entities: none","0.6666666666666666"
+"55","What's the weather like in Sydney today?","variant_0","Completed","intent: weather_check
+entities: Sydney","intent: weather_check, entities: Sydney","intent: weather_check
+entities: Sydney","1"
+"56","Will there be a thunderstorm in Mumbai?","variant_0","Completed","intent: weather_check
+entities: Mumbai, thunderstorm","intent: weather_check, entities: Mumbai","intent: weather_check
+entities: Mumbai, thunderstorm","0.888888888888889"
+"57","Tell me the latest business news.","variant_0","Completed","intent: news_check
+entities: business news","intent: news_check, entities: business","intent: news_check
+entities: business news","0.888888888888889"
+"58","Any updates on the fashion world?","variant_0","Completed","intent: news_check
+entities: fashion world","intent: news_check, entities: fashion","intent: news_check
+entities: fashion world","0.888888888888889"
+"59","I want to buy a new camera.","variant_0","Completed","intent: e_commerce_search
+entities: a new camera","intent: e_commerce_search, entities: camera","intent: e_commerce_search
+entities: a new camera","0.888888888888889"
+"60","Show me mobile phones under 25000.","variant_0","Completed","intent: e_commerce_search
+entities: mobile phones, 25000","intent: e_commerce_search, entities: mobile under 25000","intent: e_commerce_search
+entities: mobile phones, 25000","0.8333333333333334"
+"61","Where can I buy handmade jewelry online?","variant_0","Completed","intent: e_commerce_search
+entities: handmade jewelry, online","intent: e_commerce_search, entities: handmade jewelry","intent: e_commerce_search
+entities: handmade jewelry, online","0.9090909090909091"
+"62","Tell me a story about a brave warrior.","variant_0","Completed","intent: story_telling
+entities: brave warrior","intent: story_telling, entities: brave warrior","intent: story_telling
+entities: brave warrior","1"
+"63","Once upon a time,  there was a wise old owl.","variant_0","Completed","intent: story_telling
+entities: wise old owl","intent: story_telling, entities: owl","intent: story_telling
+entities: wise old owl","0.8"
+"64","Who wrote the novel ""To Kill a Mockingbird""?","variant_0","Completed","intent: general_knowledge
+entities: ""To Kill a Mockingbird"" novel, author or writer may be an implied entity. The system should clarify if it needs clarification about the entity.","intent: general_knowledge, entities: novel,  To Kill a Mockingbird","intent: general_knowledge
+entities: ""To Kill a Mockingbird"" novel, author or writer may be an implied entity. The system should clarify if it needs clarification about the entity.","0.4666666666666667"
+"65","What is the currency of Australia?","variant_0","Completed","intent: general_knowledge
+entities: Australia","intent: general_knowledge, entities: Australia,  currency","intent: general_knowledge
+entities: Australia","0.888888888888889"
+"66","What's your favorite food?","variant_0","Completed","intent: any_other
+entities: None (this question is not covered in the specified intents)","intent: any_other","intent: any_other
+entities: None (this question is not covered in the specified intents)","0.2857142857142857"
+"67","How can I get to the nearest subway station?","variant_0","Completed","intent: any_other
+entities: the nearest subway station","intent: any_other, entities: subway station","intent: any_other
+entities: the nearest subway station","0.9090909090909091"
+"68","Can you tell me a fun fact?","variant_0","Completed","intent: general_knowledge
+entities: None (the user did not specify a topic for the fun fact)","intent: any_other","intent: general_knowledge
+entities: None (the user did not specify a topic for the fun fact)","0.14285714285714285"
+"69","What's the weather like in Dubai?","variant_0","Completed","intent: weather_check
+entities: Dubai","intent: weather_check, entities: Dubai","intent: weather_check
+entities: Dubai","1"
+"70","Will it snow in New York next week?","variant_0","Completed","intent: weather_check
+entities: New York, next week, snow","intent: weather_check, entities: New York","intent: weather_check
+entities: New York, next week, snow","0.7692307692307693"
+"71","Tell me the latest health and wellness news.","variant_0","Completed","intent: news_check
+entities: health and wellness","intent: news_check, entities: health and wellness","intent: news_check
+entities: health and wellness","1"
+"72","Any updates on the science and technology world?","variant_0","Completed","intent: news_check
+entities: science and technology world","intent: news_check, entities: science and technology","intent: news_check
+entities: science and technology world","0.923076923076923"
+"73","I want to buy a new pair of headphones.","variant_0","Completed","intent: e_commerce_search
+entities: a new pair of headphones","intent: e_commerce_search, entities: headphones","intent: e_commerce_search
+entities: a new pair of headphones","0.7272727272727273"
+"74","Show me laptops with 16GB RAM.","variant_0","Completed","intent: e_commerce_search
+entities: laptops, RAM (16GB)","intent: e_commerce_search, entities: laptops,  16GB RAM","intent: e_commerce_search
+entities: laptops, RAM (16GB)","1"
+"75","Where can I buy gardening tools online?","variant_0","Completed","intent: e_commerce_search
+entities: gardening tools","intent: e_commerce_search, entities: gardening tools","intent: e_commerce_search
+entities: gardening tools","1"
+"76","Tell me a story about a magical forest.","variant_0","Completed","intent: story_telling
+entities: a magical forest","intent: story_telling, entities: magical forest","intent: story_telling
+entities: a magical forest","1"
+"77","Once upon a time,  there was a kind-hearted queen.","variant_0","Completed","intent: story_telling
+entities: a queen","intent: story_telling, entities: queen","intent: story_telling
+entities: a queen","1"
+"78","Who invented the telephone?","variant_0","Completed","intent: general_knowledge
+entities: telephone, invented","intent: general_knowledge, entities: telephone","intent: general_knowledge
+entities: telephone, invented","0.888888888888889"
+"79","What is the national animal of Canada?","variant_0","Completed","intent: general_knowledge
+entities: Canada, national animal","intent: general_knowledge, entities: Canada","intent: general_knowledge
+entities: Canada, national animal","0.8"
+"80","What's your favorite movie?","variant_0","Completed","intent: any_other
+entities: None","intent: any_other","intent: any_other
+entities: None","0.6666666666666666"
+"81","Is there a pharmacy nearby?","variant_0","Completed","intent: any_other
+entities: pharmacy, nearby","intent: any_other, entities: pharmacy","intent: any_other
+entities: pharmacy, nearby","0.888888888888889"
+"82","Can you tell me a riddle?","variant_0","Completed","intent: general_knowledge
+entities: No specific entity detected. However, it can be ""riddle"".","intent: any_other","intent: general_knowledge
+entities: No specific entity detected. However, it can be ""riddle"".","0.14285714285714285"
+"83","What's the weather like in Tokyo today?","variant_0","Completed","intent: weather_check
+entities: Tokyo","intent: weather_check, entities: Tokyo","intent: weather_check
+entities: Tokyo","1"
+"84","Will it rain in Singapore tomorrow?","variant_0","Completed","intent: weather_check
+entities: Singapore, tomorrow","intent: weather_check, entities: Singapore","intent: weather_check
+entities: Singapore, tomorrow","0.888888888888889"
+"85","Tell me the latest environmental news.","variant_0","Completed","intent: news_check
+entities: environmental","intent: news_check, entities: environmental","intent: news_check
+entities: environmental","1"
+"86","Any updates on the automotive world?","variant_0","Completed","intent: news_check
+entities: automotive world","intent: news_check, entities: automotive","intent: news_check
+entities: automotive world","0.888888888888889"
+"87","I want to buy a new smartwatch.","variant_0","Completed","intent: e_commerce_search
+entities: smartwatch","intent: e_commerce_search, entities: smartwatch","intent: e_commerce_search
+entities: smartwatch","1"
+"88","Show me mobile phones under 30000.","variant_0","Completed","intent: e_commerce_search
+entities: mobile phones, 30000","intent: e_commerce_search, entities: mobile under 30000","intent: e_commerce_search
+entities: mobile phones, 30000","0.8333333333333334"
+"89","Where can I buy handmade crafts online?","variant_0","Completed","intent: e_commerce_search
+entities: handmade crafts","intent: e_commerce_search, entities: handmade crafts","intent: e_commerce_search
+entities: handmade crafts","1"
+"90","Tell me a story about a brave astronaut.","variant_0","Completed","intent: story_telling
+entities: a brave astronaut","intent: story_telling, entities: brave astronaut","intent: story_telling
+entities: a brave astronaut","1"
+"91","Once upon a time,  there was a mischievous elf.","variant_0","Completed","intent: story_telling
+entities: an elf","intent: story_telling, entities: elf","intent: story_telling
+entities: an elf","1"
+"92","Who painted the Mona Lisa?","variant_0","Completed","intent: general_knowledge
+entities: Mona Lisa","intent: general_knowledge, entities: Mona Lisa","intent: general_knowledge
+entities: Mona Lisa","1"
+"93","What is the currency of Brazil?","variant_0","Completed","intent: general_knowledge
+entities: Brazil, currency","intent: general_knowledge, entities: Brazil,  currency","intent: general_knowledge
+entities: Brazil, currency","1"
+"94","What's your favorite book?","variant_0","Completed","intent: any_other
+entities: None","intent: any_other","intent: any_other
+entities: None","0.6666666666666666"
+"95","How can I get to the nearest post office?","variant_0","Completed","intent: any_other
+entities: nearest post office","intent: any_other, entities: post office","intent: any_other
+entities: nearest post office","0.9090909090909091"
+"96","Can you tell me a fun joke?","variant_0","Completed","intent: any_other (since the user did not specify a specific intent related to it)
+entities: None","intent: any_other","intent: any_other (since the user did not specify a specific intent related to it)
+entities: None","0.25"
+"97","What's the weather like in Paris today?","variant_0","Completed","intent: weather_check
+entities: Paris","intent: weather_check, entities: Paris","intent: weather_check
+entities: Paris","1"
+"98","Will it be a sunny day in Sydney tomorrow?","variant_0","Completed","intent: weather_check
+entities: Sydney, tomorrow","intent: weather_check, entities: Sydney","intent: weather_check
+entities: Sydney, tomorrow","0.888888888888889"
+"99","Tell me the latest technology news.","variant_0","Completed","intent: news_check
+entities: technology","intent: news_check, entities: technology","intent: news_check
+entities: technology","1"
+"100","Any updates on the entertainment world?","variant_0","Completed","intent: news_check
+entities: entertainment world","intent: news_check, entities: entertainment","intent: news_check
+entities: entertainment world","0.888888888888889"
+"101","I want to buy a new tablet.","variant_0","Completed","intent: e_commerce_search
+entities: tablet","intent: e_commerce_search, entities: tablet","intent: e_commerce_search
+entities: tablet","1"
+"102","Show me laptops with SSD storage.","variant_0","Completed","intent: e_commerce_search
+entities: laptops, SSD storage","intent: e_commerce_search, entities: laptops,  SSD storage","intent: e_commerce_search
+entities: laptops, SSD storage","1"
+"103","Where can I buy pet supplies online?","variant_0","Completed","intent: e_commerce_search
+entities: pet supplies","intent: e_commerce_search, entities: pet supplies","intent: e_commerce_search
+entities: pet supplies","1"
+"104","Tell me a story about a mysterious treasure.","variant_0","Completed","intent: story_telling
+entities: mysterious treasure","intent: story_telling, entities: mysterious treasure","intent: story_telling
+entities: mysterious treasure","1"
+"105","Once upon a time,  there was a legendary warrior princess.","variant_0","Completed","intent: story_telling
+entities: a legendary warrior princess","intent: story_telling, entities: warrior princess","intent: story_telling
+entities: a legendary warrior princess","0.9090909090909091"
+"106","Who was the first person to walk on the moon?","variant_0","Completed","intent: general_knowledge
+entities: first person, walk, moon","intent: general_knowledge, entities: moon","intent: general_knowledge
+entities: first person, walk, moon","0.7272727272727273"
+"107","What is the national bird of India?","variant_0","Completed","intent: general_knowledge
+entities: national bird, India","intent: general_knowledge, entities: India,  national bird","intent: general_knowledge
+entities: national bird, India","1"
+"108","What's your favorite sport?","variant_0","Completed","intent: any_other
+entities: None","intent: any_other","intent: any_other
+entities: None","0.6666666666666666"
+"109","Where can I find a good coffee shop nearby?","variant_0","Completed","intent: any_other
+entities: coffee shop, nearby","intent: any_other, entities: coffee shop","intent: any_other
+entities: coffee shop, nearby","0.9090909090909091"
+"110","Can you tell me an interesting fact about space?","variant_0","Completed","intent: general_knowledge
+entities: space","intent: any_other, entities: space","intent: general_knowledge
+entities: space","0.75"
+"111","What's the weather like in Beijing today?","variant_0","Completed","intent: weather_check
+entities: Beijing","intent: weather_check, entities: Beijing","intent: weather_check
+entities: Beijing","1"
+"112","Will it rain in London tomorrow?","variant_0","Completed","intent: weather_check
+entities: London, tomorrow","intent: weather_check, entities: London","intent: weather_check
+entities: London, tomorrow","0.888888888888889"
+"113","Tell me the latest finance and economy news.","variant_0","Completed","intent: news_check
+entities: finance and economy","intent: news_check, entities: finance and economy","intent: news_check
+entities: finance and economy","1"
+"114","Any updates on the medical world?","variant_0","Completed","intent: news_check
+entities: medical world","intent: news_check, entities: medical","intent: news_check
+entities: medical world","0.888888888888889"
+"115","I want to buy a new bicycle.","variant_0","Completed","intent: e_commerce_search
+entities: bicycle","intent: e_commerce_search, entities: bicycle","intent: e_commerce_search
+entities: bicycle","1"
+"116","Show me smartphones with 5G capability.","variant_0","Completed","intent: e_commerce_search
+entities: smartphones, 5G capability","intent: e_commerce_search, entities: smartphones,  5G capability","intent: e_commerce_search
+entities: smartphones, 5G capability","1"
+"117","Where can I buy handmade clothing online?","variant_0","Completed","intent: e_commerce_search
+entities: handmade clothing, online","intent: e_commerce_search, entities: handmade clothing","intent: e_commerce_search
+entities: handmade clothing, online","0.9090909090909091"
+"118","Tell me a story about a cunning fox.","variant_0","Completed","Sure. Here's a short story about a cunning fox:
+
+Once upon a time, there was a fox who was very hungry. He wandered around for a while in search of food and finally came across an orchard full of apples. The fox immediately jumped over the fence and started eating the apples to his heart's content.
+
+However, soon the fox finished eating all the apples from the lower branches and couldn't reach the ones on the higher branches. He then decided to come up with a plan to","intent: story_telling, entities: cunning fox","Sure. Here's a short story about a cunning fox:
+
+Once upon a time, there was a fox who was very hungry. He wandered around for a while in search of food and finally came across an orchard full of apples. The fox immediately jumped over the fence and started eating the apples to his heart's content.
+
+However, soon the fox finished eating all the apples from the lower branches and couldn't reach the ones on the higher branches. He then decided to come up with a plan to","0.05128205128205128"
+"119","Once upon a time,  there was a magical genie.","variant_0","Completed","intent: story_telling
+entities: magic genie","intent: story_telling, entities: genie","intent: story_telling
+entities: magic genie","0.888888888888889"
+"120","Who was the inventor of the light bulb?","variant_0","Completed","intent: general_knowledge
+entities: inventor, light bulb","intent: general_knowledge, entities: light bulb","intent: general_knowledge
+entities: inventor, light bulb","0.9090909090909091"
+"121","What is the currency of Russia?","variant_0","Completed","intent: general_knowledge
+entities: Russia (for context)","intent: general_knowledge, entities: Russia,  currency","intent: general_knowledge
+entities: Russia (for context)","0.7272727272727272"
+"122","What's your favorite hobby?","variant_0","Completed","intent: any_other
+entities: None","intent: any_other","intent: any_other
+entities: None","0.6666666666666666"
+"123","Is there a gas station around here?","variant_0","Completed","intent: any_other
+entities: gas station, here (but the location of ""here"" is unknown)","intent: any_other, entities: gas station","intent: any_other
+entities: gas station, here (but the location of ""here"" is unknown)","0.5882352941176471"
+"124","Can you tell me a fascinating historical fact?","variant_0","Completed","intent: general_knowledge
+entities: None (this intent does not require any specific entities)","intent: any_other","intent: general_knowledge
+entities: None (this intent does not require any specific entities)","0.14285714285714285"
+"125","What's the weather like in New Delhi today?","variant_0","Completed","intent: weather_check
+entities: New Delhi","intent: weather_check, entities: New Delhi","intent: weather_check
+entities: New Delhi","1"
+"126","Will it be a sunny day in San Francisco tomorrow?","variant_0","Completed","intent: weather_check
+entities: San Francisco","intent: weather_check, entities: San Francisco","intent: weather_check
+entities: San Francisco","1"
+"127","Tell me the latest fashion and beauty news.","variant_0","Completed","intent: news_check
+entities: fashion and beauty","intent: news_check, entities: fashion and beauty","intent: news_check
+entities: fashion and beauty","1"
+"128","Any updates on the gaming world?","variant_0","Completed","intent: news_check
+entities: gaming world","intent: news_check, entities: gaming","intent: news_check
+entities: gaming world","0.888888888888889"
+"129","I want to buy a new smart TV.","variant_0","Completed","intent: e_commerce_search
+entities: smart TV","intent: e_commerce_search, entities: smart TV","intent: e_commerce_search
+entities: smart TV","1"
+"130","Show me laptops with touch screen feature.","variant_0","Completed","intent: e_commerce_search
+entities: laptops with touch screen feature","intent: e_commerce_search, entities: laptops,  touch screen","intent: e_commerce_search
+entities: laptops with touch screen feature","0.8571428571428571"
+"131","Where can I buy home decor items online?","variant_0","Completed","intent: e_commerce_search
+entities: home decor items","intent: e_commerce_search, entities: home decor","intent: e_commerce_search
+entities: home decor items","0.9090909090909091"
+"132","Tell me a story about a courageous knight.","variant_0","Completed","intent: story_telling
+entities: a courageous knight","intent: story_telling, entities: courageous knight","intent: story_telling
+entities: a courageous knight","1"
+"133","Once upon a time,  there was a magical unicorn.","variant_0","Completed","intent: story_telling
+entities: magical unicorn","intent: story_telling, entities: unicorn","intent: story_telling
+entities: magical unicorn","0.888888888888889"
+"134","Who wrote the play ""Hamlet""?","variant_0","Completed","intent: general_knowledge
+entities: ""Hamlet""","intent: general_knowledge, entities: play,  Hamlet","intent: general_knowledge
+entities: ""Hamlet""","0.888888888888889"
+"135","What is the currency of Mexico?","variant_0","Completed","intent: general_knowledge
+entities: Mexico","intent: general_knowledge, entities: Mexico,  currency","intent: general_knowledge
+entities: Mexico","0.888888888888889"
+"136","What's your favorite TV show?","variant_0","Completed","intent: any_other","intent: any_other","intent: any_other","1"
+"137","How can I get to the nearest bank?","variant_0","Completed","intent: any_other
+entities: nearest bank","intent: any_other, entities: bank","intent: any_other
+entities: nearest bank","0.888888888888889"
+"138","Can you tell me a mind-boggling riddle?","variant_0","Completed","intent: general_knowledge","intent: any_other","intent: general_knowledge","0.5"
+"139","What's the weather like in Singapore today?","variant_0","Completed","intent: weather_check
+entities: Singapore","intent: weather_check, entities: Singapore","intent: weather_check
+entities: Singapore","1"
+"140","Will it rain in Tokyo tomorrow?","variant_0","Completed","intent: weather_check
+entities: Tokyo, tomorrow","intent: weather_check, entities: Tokyo","intent: weather_check
+entities: Tokyo, tomorrow","0.888888888888889"
+"141","Tell me the latest travel and leisure news.","variant_0","Completed","intent: news_check
+entities: travel and leisure","intent: news_check, entities: travel and leisure","intent: news_check
+entities: travel and leisure","1"
+"142","Any updates on the food and restaurant world?","variant_0","Completed","intent: news_check
+entities: food, restaurant world","intent: news_check, entities: food and restaurant","intent: news_check
+entities: food, restaurant world","0.8333333333333334"
+"143","I want to buy a new pair of sunglasses.","variant_0","Completed","intent: e_commerce_search
+entities: sunglasses","intent: e_commerce_search, entities: sunglasses","intent: e_commerce_search
+entities: sunglasses","1"
+"144","Show me tablets with long battery life.","variant_0","Completed","intent: e_commerce_search
+entities: tablets with long battery life","intent: e_commerce_search, entities: tablets,  long battery life","intent: e_commerce_search
+entities: tablets with long battery life","0.9333333333333333"
+"145","Where can I buy handmade artworks online?","variant_0","Completed","intent: e_commerce_search
+entities: handmade artworks online","intent: e_commerce_search, entities: handmade artworks","intent: e_commerce_search
+entities: handmade artworks online","0.9090909090909091"
+"146","Tell me a story about a magical journey.","variant_0","Completed","intent: story_telling
+entities: a magical journey","intent: story_telling, entities: magical journey","intent: story_telling
+entities: a magical journey","1"
+"147","Once upon a time,  there was a talented musician.","variant_0","Completed","intent: any_other
+entities: None","intent: story_telling, entities: musician","intent: any_other
+entities: None","0.5"
+"148","Who was the first woman to win a Nobel Prize?","variant_0","Completed","intent: general_knowledge
+entities: first woman, Nobel Prize","intent: general_knowledge, entities: Nobel Prize","intent: general_knowledge
+entities: first woman, Nobel Prize","0.8333333333333333"
+"149","What is the currency of South Africa?","variant_0","Completed","intent: general_knowledge
+entities: South Africa, currency","intent: general_knowledge, entities: South Africa,  currency","intent: general_knowledge
+entities: South Africa, currency","1"
+"150","What's your favorite place to visit?","variant_0","Completed","intent: any_other
+entities: None (This question is requesting information about the assistant and doesn't fit into any of the above categories)","intent: any_other","intent: any_other
+entities: None (This question is requesting information about the assistant and doesn't fit into any of the above categories)","0.1904761904761905"
+"151","Where can I find a good pizza place nearby?","variant_0","Completed","intent: e_commerce_search
+entities: pizza place, nearby","intent: any_other, entities: pizza place","intent: e_commerce_search
+entities: pizza place, nearby","0.7272727272727272"
+"152","Can you tell me an intriguing science fact?","variant_0","Completed","intent: general_knowledge
+entities: science fact","intent: any_other","intent: general_knowledge
+entities: science fact","0.28571428571428575"
+"153","What's the weather like in Toronto today?","variant_0","Completed","intent: weather_check
+entities: Toronto","intent: weather_check, entities: Toronto","intent: weather_check
+entities: Toronto","1"
+"154","Will it be a sunny day in Rome tomorrow?","variant_0","Completed","intent: weather_check
+entities: Rome, tomorrow","intent: weather_check, entities: Rome","intent: weather_check
+entities: Rome, tomorrow","0.888888888888889"
+"155","Tell me the latest education and learning news.","variant_0","Completed","intent: news_check
+entities: education and learning","intent: news_check, entities: education and learning","intent: news_check
+entities: education and learning","1"
+"156","Any updates on the music world?","variant_0","Completed","intent: news_check
+entities: music world","intent: news_check, entities: music","intent: news_check
+entities: music world","0.888888888888889"
+"157","I want to buy a new gaming laptop.","variant_0","Completed","intent: e_commerce_search
+entities: new, gaming, laptop","intent: e_commerce_search, entities: gaming laptop","intent: e_commerce_search
+entities: new, gaming, laptop","0.9090909090909091"
+"158","Show me smartphones with high-quality cameras.","variant_0","Completed","intent: e_commerce_search
+entities: smartphones, high-quality camera","intent: e_commerce_search, entities: smartphones,  high-quality cameras","intent: e_commerce_search
+entities: smartphones, high-quality camera","0.8333333333333334"
+"159","Where can I buy pet food online?","variant_0","Completed","intent: e_commerce_search
+entities: pet food, online","intent: e_commerce_search, entities: pet food","intent: e_commerce_search
+entities: pet food, online","0.9090909090909091"
+"160","Tell me a story about a wise sage.","variant_0","Completed","intent: story_telling
+entities: a wise sage","intent: story_telling, entities: wise sage","intent: story_telling
+entities: a wise sage","1"
+"161","Once upon a time,  there was a clever fox.","variant_0","Completed","It appears that you are starting a story, do you want me to tell you a story or you just want to share a story with me?","intent: story_telling, entities: fox","It appears that you are starting a story, do you want me to tell you a story or you just want to share a story with me?","0"
+"162","Who was the inventor of the telephone?","variant_0","Completed","intent: general_knowledge
+entities: inventor of the telephone","intent: general_knowledge, entities: telephone","intent: general_knowledge
+entities: inventor of the telephone","0.8"
+"163","What is the currency of Germany?","variant_0","Completed","intent: general_knowledge
+entities: Germany, currency","intent: general_knowledge, entities: Germany,  currency","intent: general_knowledge
+entities: Germany, currency","1"
+"164","What's your favorite holiday destination?","variant_0","Completed","intent: any_other
+entities: None (clarification needed as the intent is not relevant to the system's purpose)","intent: any_other","intent: any_other
+entities: None (clarification needed as the intent is not relevant to the system's purpose)","0.25"
+"165","Is there a pharmacy nearby?","variant_0","Completed","intent: any_other
+entities: pharmacy, nearby","intent: any_other, entities: pharmacy","intent: any_other
+entities: pharmacy, nearby","0.888888888888889"
+"166","Can you tell me an interesting historical event?","variant_0","Completed","intent: general_knowledge
+entities: historical event","intent: any_other","intent: general_knowledge
+entities: historical event","0.28571428571428575"
+"167","What's the weather like in Hong Kong today?","variant_0","Completed","intent: weather_check
+entities: Hong Kong","intent: weather_check, entities: Hong Kong","intent: weather_check
+entities: Hong Kong","1"
+"168","Will it rain in Sydney tomorrow?","variant_0","Completed","intent: weather_check
+entities: Sydney, tomorrow","intent: weather_check, entities: Sydney","intent: weather_check
+entities: Sydney, tomorrow","0.888888888888889"
+"169","Tell me the latest technology and gadgets news.","variant_0","Completed","intent: news_check
+entities: technology, gadgets","intent: news_check, entities: technology and gadgets","intent: news_check
+entities: technology, gadgets","0.9090909090909091"
+"170","Any updates on the celebrity world?","variant_0","Completed","intent: news_check
+entities: celebrity world","intent: news_check, entities: celebrity","intent: news_check
+entities: celebrity world","0.888888888888889"
+"171","I want to buy a new fitness tracker.","variant_0","Completed","intent: e_commerce_search
+entities: fitness tracker","intent: e_commerce_search, entities: fitness tracker","intent: e_commerce_search
+entities: fitness tracker","1"
+"172","Show me laptops with 14-inch displays.","variant_0","Completed","intent: e_commerce_search
+entities: laptops, 14-inch displays","intent: e_commerce_search, entities: laptops,  14-inch displays","intent: e_commerce_search
+entities: laptops, 14-inch displays","1"
+"173","Where can I buy handmade soaps online?","variant_0","Completed","intent: e_commerce_search
+entities: handmade soaps","intent: e_commerce_search, entities: handmade soaps","intent: e_commerce_search
+entities: handmade soaps","1"
+"174","Tell me a story about a brave sea captain.","variant_0","Completed","intent: story_telling
+entities: a brave sea captain","intent: story_telling, entities: sea captain","intent: story_telling
+entities: a brave sea captain","0.9090909090909091"
+"25","What's up?","variant_0","Completed","intent: general_greetings","intent: general_greetings","intent: general_greetings","1"
+"26","Is it going to snow in Shimla?","variant_0","Completed","intent: weather_check
+entities: Shimla, snow","intent: weather_check, entities: Shimla","intent: weather_check
+entities: Shimla, snow","0.888888888888889"
+"27","How's the weather in Hyderabad?","variant_0","Completed","intent: weather_check
+entities: Hyderabad","intent: weather_check, entities: Hyderabad","intent: weather_check
+entities: Hyderabad","1"
+"28","Any news about the stock market?","variant_0","Completed","intent: news_check
+entities: stock market","intent: news_check, entities: stock market","intent: news_check
+entities: stock market","1"
+"29","What's happening in the entertainment world?","variant_0","Completed","intent: news_check
+entities: entertainment world","intent: news_check, entities: entertainment","intent: news_check
+entities: entertainment world","0.888888888888889"
+"30","I need to buy a new laptop.","variant_0","Completed","intent: e_commerce_search
+entities: laptop","intent: e_commerce_search, entities: laptop","intent: e_commerce_search
+entities: laptop","1"
+"31","Show me mobile phones under 15000.","variant_0","Completed","intent: e_commerce_search
+entities: mobile phones, 15000","intent: e_commerce_search, entities: mobile under 15000","intent: e_commerce_search
+entities: mobile phones, 15000","0.8333333333333334"
+"32","Where can I buy a drone online?","variant_0","Completed","intent: e_commerce_search
+entities: drone, online","intent: e_commerce_search, entities: drone","intent: e_commerce_search
+entities: drone, online","0.888888888888889"
+"33","Tell me a story about a magical land.","variant_0","Completed","intent: story_telling
+entities: a magical land","intent: story_telling, entities: magical land","intent: story_telling
+entities: a magical land","1"
+"34","Once upon a time,  there was a little fairy.","variant_0","Completed","intent: story_telling
+entities: a little fairy","intent: story_telling, entities: fairy","intent: story_telling
+entities: a little fairy","0.888888888888889"
+"35","Who wrote the play ""Romeo and Juliet""?","variant_0","Completed","intent: general_knowledge
+entities: ""Romeo and Juliet""","intent: general_knowledge, entities: play,  Romeo and Juliet","intent: general_knowledge
+entities: ""Romeo and Juliet""","0.923076923076923"
+"36","What is the currency of Japan?","variant_0","Completed","intent: general_knowledge
+entities: Japan, currency","intent: general_knowledge, entities: Japan,  currency","intent: general_knowledge
+entities: Japan, currency","1"
+"37","What is your purpose?","variant_0","Completed","intent: any_other
+entities: None","intent: any_other","intent: any_other
+entities: None","0.6666666666666666"
+"38","Where is the nearest gas station?","variant_0","Completed","intent: e_commerce_search
+entities: nearest gas station","intent: any_other, entities: gas station","intent: e_commerce_search
+entities: nearest gas station","0.7272727272727272"
+"39","Can you sing a song?","variant_0","Completed","intent: any_other","intent: any_other","intent: any_other","1"
+"40","Good morning,  how are you doing today?","variant_0","Completed","intent: general_greetings","intent: general_greetings","intent: general_greetings","1"
+"41","What's the weather forecast for London?","variant_0","Completed","intent: weather_check
+entities: London","intent: weather_check, entities: London","intent: weather_check
+entities: London","1"
+"42","Will it be sunny in Los Angeles tomorrow?","variant_0","Completed","intent: weather_check
+entities: Los Angeles tomorrow","intent: weather_check, entities: Los Angeles","intent: weather_check
+entities: Los Angeles tomorrow","0.9090909090909091"
+"43","Tell me the latest political news.","variant_0","Completed","intent: news_check
+entities: political news","intent: news_check, entities: political","intent: news_check
+entities: political news","0.888888888888889"
+"44","Any updates on the sports world?","variant_0","Completed","intent: news_check
+entities: sports world","intent: news_check, entities: sports","intent: news_check
+entities: sports world","0.888888888888889"
+"45","I want to buy a new pair of shoes.","variant_0","Completed","intent: e_commerce_search
+entities: shoes","intent: e_commerce_search, entities: shoes","intent: e_commerce_search
+entities: shoes","1"
+"46","Show me laptops with i7 processors.","variant_0","Completed","intent: e_commerce_search
+entities: laptops, i7 processor","intent: e_commerce_search, entities: laptops,  i7 processors","intent: e_commerce_search
+entities: laptops, i7 processor","0.8333333333333334"
+"47","Where can I buy a gaming console?","variant_0","Completed","intent: e_commerce_search
+entities: gaming console","intent: e_commerce_search, entities: gaming console","intent: e_commerce_search
+entities: gaming console","1"
+"48","Tell me a story about a haunted house.","variant_0","Completed","intent: story_telling
+entities: haunted house","intent: story_telling, entities: haunted house","intent: story_telling
+entities: haunted house","1"
+"49","Once upon a time,  there was a mischievous leprechaun.","variant_0","Completed","intent: story_telling
+entities: None (no specific entity is mentioned in this sentence)","intent: story_telling, entities: leprechaun","intent: story_telling
+entities: None (no specific entity is mentioned in this sentence)","0.375"
+"175","Once upon a time,  there was a magical mermaid.","variant_0","Completed","intent: story_telling
+entities: a magical mermaid","intent: story_telling, entities: mermaid","intent: story_telling
+entities: a magical mermaid","0.888888888888889"
+"176","Who discovered the theory of relativity?","variant_0","Completed","intent: general_knowledge
+entities: theory of relativity","intent: general_knowledge, entities: theory of relativity","intent: general_knowledge
+entities: theory of relativity","1"
+"177","What is the currency of Egypt?","variant_0","Completed","intent: general_knowledge
+entities: Egypt, currency","intent: general_knowledge, entities: Egypt,  currency","intent: general_knowledge
+entities: Egypt, currency","1"
+"178","What's your favorite animal?","variant_0","Completed","intent: any_other
+entities: None (because the user is not requesting information or action related to a specific intent or entity)","intent: any_other","intent: any_other
+entities: None (because the user is not requesting information or action related to a specific intent or entity)","0.19999999999999998"
+"179","How can I get to the nearest movie theater?","variant_0","Completed","intent: any_other
+entities: movie theater","intent: any_other, entities: movie theater","intent: any_other
+entities: movie theater","1"
+"180","Can you tell me an intriguing science fiction fact?","variant_0","Completed","intent: general_knowledge
+entities: science fiction fact.
+
+I'm afraid I don't have a database of intriguing science fiction facts at the moment. However, I can look up a random science fiction fact for you from the internet if you'd like.","intent: any_other","intent: general_knowledge
+entities: science fiction fact.
+
+I'm afraid I don't have a database of intriguing science fiction facts at the moment. However, I can look up a random science fiction fact for you from the internet if you'd like.","0.05405405405405405"
+"181","What's the weather like in Bangkok today?","variant_0","Completed","intent: weather_check
+entities: Bangkok","intent: weather_check, entities: Bangkok","intent: weather_check
+entities: Bangkok","1"
+"182","Will it be a sunny day in Amsterdam tomorrow?","variant_0","Completed","intent: weather_check
+entities: Amsterdam","intent: weather_check, entities: Amsterdam","intent: weather_check
+entities: Amsterdam","1"
+"183","Tell me the latest arts and culture news.","variant_0","Completed","intent: news_check
+entities: arts and culture","intent: news_check, entities: arts and culture","intent: news_check
+entities: arts and culture","1"
+"184","Any updates on the education and technology world?","variant_0","Completed","intent: news_check
+entities: education, technology","intent: news_check, entities: education and technology","intent: news_check
+entities: education, technology","0.9090909090909091"
+"185","I want to buy a new pair of running shoes.","variant_0","Completed","intent: e_commerce_search
+entities: running shoes","intent: e_commerce_search, entities: running shoes","intent: e_commerce_search
+entities: running shoes","1"
+"186","Show me laptops with dedicated graphics cards.","variant_0","Completed","intent: e_commerce_search
+entities: laptops, dedicated graphics cards","intent: e_commerce_search, entities: laptops,  dedicated graphics cards","intent: e_commerce_search
+entities: laptops, dedicated graphics cards","1"
+"187","Where can I buy organic food online?","variant_0","Completed","intent: e_commerce_search
+entities: organic food","intent: e_commerce_search, entities: organic food","intent: e_commerce_search
+entities: organic food","1"
+"188","Tell me a story about a fearless adventurer.","variant_0","Completed","intent: story_telling
+entities: adventurer (characteristics like fearless can also be considered as entities)","intent: story_telling, entities: fearless adventurer","intent: story_telling
+entities: adventurer (characteristics like fearless can also be considered as entities)","0.5555555555555556"
+"189","Once upon a time,  there was a wise hermit.","variant_0","Completed","intent: story_telling
+entities: wise hermit","intent: story_telling, entities: hermit","intent: story_telling
+entities: wise hermit","0.888888888888889"
+"190","Who was the first person to fly solo across the Atlantic Ocean?","variant_0","Completed","intent: general_knowledge
+entities: first person to fly solo across the Atlantic Ocean","intent: general_knowledge, entities: Atlantic Ocean","intent: general_knowledge
+entities: first person to fly solo across the Atlantic Ocean","0.625"
+"191","What is the currency of Italy?","variant_0","Completed","intent: general_knowledge
+entities: Italy","intent: general_knowledge, entities: Italy,  currency","intent: general_knowledge
+entities: Italy","0.888888888888889"
+"192","What's your favorite type of music?","variant_0","Completed","intent: any_other
+entities: None","intent: any_other","intent: any_other
+entities: None","0.6666666666666666"
+"193","Where can I find a good sushi restaurant nearby?","variant_0","Completed","intent: e_commerce_search
+entities: sushi restaurant and nearby","intent: any_other, entities: sushi restaurant","intent: e_commerce_search
+entities: sushi restaurant and nearby","0.6666666666666666"
+"194","Can you tell me an interesting animal fact?","variant_0","Completed","intent: general_knowledge
+entities: animal fact","intent: any_other","intent: general_knowledge
+entities: animal fact","0.28571428571428575"
+"195","What's the weather like in Berlin today?","variant_0","Completed","intent: weather_check
+entities: Berlin","intent: weather_check, entities: Berlin","intent: weather_check
+entities: Berlin","1"
+"196","Will it rain in Paris tomorrow?","variant_0","Completed","intent: weather_check
+entities: Paris, tomorrow","intent: weather_check, entities: Paris","intent: weather_check
+entities: Paris, tomorrow","0.888888888888889"
+"197","Tell me the latest fashion and lifestyle news.","variant_0","Completed","intent: news_check
+entities: fashion and lifestyle","intent: news_check, entities: fashion and lifestyle","intent: news_check
+entities: fashion and lifestyle","1"
+"198","Any updates on the technology and gaming world?","variant_0","Completed","intent: news_check
+entities: technology and gaming world","intent: news_check, entities: technology and gaming","intent: news_check
+entities: technology and gaming world","0.923076923076923"
+"199","I want to buy a new digital camera.","variant_0","Completed","intent: e_commerce_search
+entities: digital camera","intent: e_commerce_search, entities: digital camera","intent: e_commerce_search
+entities: digital camera","1"
