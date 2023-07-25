@@ -1,0 +1,64 @@
+﻿line_number,question,variant_id,status,result,question,ground_truth,answer,gpt_similarity
+"0","Hi","variant_0","Completed","intent: general_greetings","Hi","intent: general_greetings","intent: general_greetings","5"
+"1","Hello","variant_0","Completed","intent: general_greetings","Hello","intent: general_greetings","intent: general_greetings","5"
+"2","What's the weather like in Mumbai today?","variant_0","Completed","intent: weather_check
+entities: Mumbai","What's the weather like in Mumbai today?","intent: weather_check, entities: Mumbai","intent: weather_check
+entities: Mumbai","1"
+"3","Will it rain in Chennai?","variant_0","Completed","intent: weather_check
+entities: Chennai","Will it rain in Chennai?","intent: weather_check, entities: Chennai","intent: weather_check
+entities: Chennai","1"
+"4","What is the weather forecast for Kolkata?","variant_0","Completed","intent: weather_check
+entities: Kolkata","What is the weather forecast for Kolkata?","intent: weather_check, entities: Kolkata","intent: weather_check
+entities: Kolkata","1"
+"5","Can you tell me the latest news?","variant_0","Completed","intent: news_check","Can you tell me the latest news?","intent: news_check","intent: news_check","5"
+"6","What are the news headlines today?","variant_0","Completed","intent: news_check","What are the news headlines today?","intent: news_check","intent: news_check","5"
+"7","I want to buy a laptop.","variant_0","Completed","intent: e_commerce_search
+entities: laptop","I want to buy a laptop.","intent: e_commerce_search, entities: laptop","intent: e_commerce_search
+entities: laptop","3"
+"8","Show me mobile phones under 10000.","variant_0","Completed","intent: e_commerce_search
+entities: mobile phones, 10000","Show me mobile phones under 10000.","intent: e_commerce_search, entities: mobile under 10000","intent: e_commerce_search
+entities: mobile phones, 10000","1"
+"9","Where can I buy a camera online?","variant_0","Completed","intent: e_commerce_search
+entities: camera","Where can I buy a camera online?","intent: e_commerce_search, entities: camera","intent: e_commerce_search
+entities: camera","1"
+"10","Tell me a story about a dragon.","variant_0","Completed","intent: story_telling
+entities: a dragon","Tell me a story about a dragon.","intent: story_telling, entities: dragon","intent: story_telling
+entities: a dragon","1"
+"11","Once upon a time,  there was a brave knight.","variant_0","Completed","I'm sorry, could you please clarify what you want me to do with this sentence?","Once upon a time,  there was a brave knight.","intent: story_telling, entities: knight","I'm sorry, could you please clarify what you want me to do with this sentence?","1"
+"12","Who is the first president of the USA?","variant_0","Completed","intent: general_knowledge
+entities: the first president of the USA","Who is the first president of the USA?","intent: general_knowledge, entities: USA,  president","intent: general_knowledge
+entities: the first president of the USA","1"
+"13","What is the capital of France?","variant_0","Completed","intent: general_knowledge
+entities: France","What is the capital of France?","intent: general_knowledge, entities: France,  capital","intent: general_knowledge
+entities: France","1"
+"14","What is your name?","variant_0","Completed","intent: any_other
+entities: None","What is your name?","intent: any_other","intent: any_other
+entities: None","5"
+"15","What time does the nearest restaurant open?","variant_0","Completed","intent: any_other
+entities: nearest restaurant, open, time. However, it seems like the intent is about finding the opening time of the restaurant, so I can suggest a better way of asking this question like ""What are the opening hours of the nearest restaurant?"" to make the intent clearer.","What time does the nearest restaurant open?","intent: any_other, entities: restaurant","intent: any_other
+entities: nearest restaurant, open, time. However, it seems like the intent is about finding the opening time of the restaurant, so I can suggest a better way of asking this question like ""What are the opening hours of the nearest restaurant?"" to make the intent clearer.","1"
+"16","Tell me a joke.","variant_0","Completed","intent: any_other
+entities: None (This intent is not covered in the above categories)","Tell me a joke.","intent: any_other","intent: any_other
+entities: None (This intent is not covered in the above categories)","1"
+"17","Can you recommend a good book to read?","variant_0","Completed","intent: any_other
+entities: None (this query is too general)","Can you recommend a good book to read?","intent: any_other, entities: book","intent: any_other
+entities: None (this query is too general)","1"
+"18","What is the temperature in Bangalore?","variant_0","Completed","intent: weather_check
+entities: Bangalore","What is the temperature in Bangalore?","intent: weather_check, entities: Bangalore","intent: weather_check
+entities: Bangalore","1"
+"19","What's the news on technology?","variant_0","Completed","intent: news_check
+entities: technology","What's the news on technology?","intent: news_check, entities: technology","intent: news_check
+entities: technology","1"
+"20","Suggest a budget-friendly mobile phone.","variant_0","Completed","intent: e_commerce_search
+entities: budget-friendly mobile phone","Suggest a budget-friendly mobile phone.","intent: e_commerce_search, entities: mobile","intent: e_commerce_search
+entities: budget-friendly mobile phone","1"
+"21","Tell me a story about an adventure.","variant_0","Completed","intent: story_telling
+entities: adventure","Tell me a story about an adventure.","intent: story_telling, entities: adventure","intent: story_telling
+entities: adventure","1"
+"22","Who discovered gravity?","variant_0","Completed","intent: general_knowledge
+entities: gravity","Who discovered gravity?","intent: general_knowledge, entities: gravity","intent: general_knowledge
+entities: gravity","1"
+"23","What is the population of China?","variant_0","Completed","intent: general_knowledge
+entities: China","What is the population of China?","intent: general_knowledge, entities: China,  population","intent: general_knowledge
+entities: China","1"
+"24","How are you?","variant_0","Completed","intent: general_greetings","How are you?","intent: general_greetings","intent: general_greetings","5"
