@@ -44,7 +44,7 @@
             "restartPolicy": "always",
             "startupOrder": 1,
             "settings": {
-              "image": "${MODULES.gpt-skills}",
+              "image": "${MODULES.gptskills}",
               "createOptions": {
                 "ExposedPorts": {
                   "8000/tcp": {}

@@ -1,0 +1,9 @@
+./openai_iot/gpt-skills/*.py
+./openai_iot/gpt-skills/*.pyc
+./openai_iot/orchestrator/*.py
+./openai_iot/orchestrator/*.pyc
+./orchestrator_requirements.txt
+./gpt-skills_requirements.txt
+./build/**
+./dist/**
+./openai_iot.egg-info
