@@ -24,6 +24,9 @@ install: build-wheel-package
 install-force: build-wheel-package
 	pip3 install ./dist/OpenAI_IoT_Skill-1.1-py3-none-any.whl --force-reinstall
 
+uninstall:
+	pip3 uninstall OpenAI_IoT_Skill
+
 service:
 	mkdir -p  ~/.config/systemd/user/
 	cp ../azure_iot_solution/.env ~/.openai_iot
@@ -37,3 +40,9 @@ service:
 	sleep 5
 	systemctl --user status openai_iot_orchestrator | cat
 	systemctl --user status openai_iot_gpt_skills | cat
+
+service-stop:
+	systemctl --user stop openai_iot_orchestrator
+	systemctl --user stop openai_iot_gpt_skills
+	systemctl --user disable openai_iot_orchestrator
+	systemctl --user disable openai_iot_gpt_skills
