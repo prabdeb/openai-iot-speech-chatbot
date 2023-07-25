@@ -5,3 +5,4 @@ RPi.GPIO
 pyaudio
 pocketsphinx
 azure-cognitiveservices-speech
+python-dotenv==1.0.0

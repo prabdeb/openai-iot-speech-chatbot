@@ -1,4 +1,6 @@
+import os
 from typing import List
+import dotenv
 from fastapi import FastAPI
 import uvicorn
 import logging
@@ -116,4 +118,10 @@ def _parse_intent_with_context(question: str, intent_answer: str) -> List[str]:
 
 
 if __name__ == "__main__":
+    environment_file = ".openai_iot"
+    home = os.path.expanduser("~")
+    if os.path.isfile(os.path.join(home, environment_file)):
+        logging.info(f"Loading environment variables from file: {os.path.join(home, environment_file)}")
+        dotenv.load_dotenv(os.path.join(home, environment_file))
+    # Start a background thread to parse audio from the microphone.
     uvicorn.run(app, host="0.0.0.0", port=8000)
