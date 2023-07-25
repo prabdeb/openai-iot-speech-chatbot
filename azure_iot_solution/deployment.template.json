@@ -117,6 +117,16 @@
                       "PathOnHost":"/dev/gpiomem",
                       "PathInContainer":"/dev/gpiomem",
                       "CgroupPermissions":"mrw"
+                    },
+                    {
+                      "PathOnHost":"/dev/snd",
+                      "PathInContainer":"/dev/snd",
+                      "CgroupPermissions":"mrw"
+                    },
+                    {
+                      "PathOnHost":"/dev/bus/usb",
+                      "PathInContainer":"/dev/bus/usb",
+                      "CgroupPermissions":"mrw"
                     }
                   ],
                   "Privileged": true
