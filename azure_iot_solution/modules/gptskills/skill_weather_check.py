@@ -1,4 +1,4 @@
-from azure_openai import generate_chat_completion, check_if_openai_is_initialized, initialize_openai, parse_prompt_gpt_35
+from .azure_openai import generate_chat_completion, check_if_openai_is_initialized, initialize_openai, parse_prompt_gpt_35
 import requests, os
 import datetime
 import logging
@@ -12,8 +12,9 @@ def get_weather_check(question: str, entities: str) -> str:
     """Get general knowledge from text"""
     if not check_if_openai_is_initialized():
         initialize_openai()
+    current_directory = os.path.dirname(os.path.realpath(__file__))
     weather_context = _get_open_weather_map(entities)
-    messages = parse_prompt_gpt_35("./prompts/weather_check.txt",
+    messages = parse_prompt_gpt_35(f"{current_directory}/prompts/weather_check.txt",
                                    weather_context=weather_context,
                                    question=question,)
     return generate_chat_completion(

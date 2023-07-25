@@ -1,4 +1,4 @@
-from azure_openai import generate_chat_completion, check_if_openai_is_initialized, initialize_openai, parse_prompt_gpt_35
+from .azure_openai import generate_chat_completion, check_if_openai_is_initialized, initialize_openai, parse_prompt_gpt_35
 import requests, os
 import logging
 
@@ -12,7 +12,8 @@ def get_e_commerce_search(question: str, entities: str) -> str:
     if not check_if_openai_is_initialized():
         initialize_openai()
     products_context = _get_products_context(entities)
-    messages = parse_prompt_gpt_35("./prompts/e_commerce_search.txt",
+    current_directory = os.path.dirname(os.path.realpath(__file__))
+    messages = parse_prompt_gpt_35(f"{current_directory}/prompts/e_commerce_search.txt",
                                    products_context=products_context,
                                    question=question)
     return generate_chat_completion(

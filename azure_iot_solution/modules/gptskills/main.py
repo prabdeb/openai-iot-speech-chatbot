@@ -2,14 +2,14 @@ from typing import List
 from fastapi import FastAPI
 import uvicorn
 import logging
-from skill_intent_detection import get_intent
-from skill_general_knowledge import get_general_knowledge
-from skill_general_greetings import get_general_greetings
-from skill_any_other import get_any_other
-from skill_story_telling import get_story_telling
-from skill_weather_check import get_weather_check
-from skill_news_check import get_news_check
-from skill_e_commerce_search import get_e_commerce_search
+from .skill_intent_detection import get_intent
+from .skill_general_knowledge import get_general_knowledge
+from .skill_general_greetings import get_general_greetings
+from .skill_any_other import get_any_other
+from .skill_story_telling import get_story_telling
+from .skill_weather_check import get_weather_check
+from .skill_news_check import get_news_check
+from .skill_e_commerce_search import get_e_commerce_search
 
 logger = logging.getLogger("uvicorn")
 ch = logging.StreamHandler()

@@ -5,8 +5,8 @@ import pocketsphinx as ps
 import pyaudio
 import RPi.GPIO as GPIO
 import requests
-from stt import recognize_from_microphone
-from tts import speak
+from .stt import recognize_from_microphone
+from .tts import speak
 import azure.cognitiveservices.speech as speechsdk
 
 tmp_audio_file = "tmp.wav"

@@ -18,6 +18,14 @@ def copy_python_files_from_azure_iot_modules(azure_iot_solution_path: str = "../
                     if file.endswith(".py"):
                         print(f"Copying {root2}/{file} to ./openai_iot/{dir}/{file}")
                         shutil.copy(f"{root2}/{file}", f"./openai_iot/{dir}/{file}")
+                for dir2 in dirs2:
+                    if dir2 == "__pycache__":
+                        continue
+                    for root3, dirs3, files3 in os.walk(f"{root2}/{dir2}"):
+                        for file in files3:
+                            if file.endswith(".txt"):
+                                print(f"Copying {root3}/{file} to ./openai_iot/{dir}/{dir2}/{file}")
+                                shutil.copy(f"{root3}/{file}", f"./openai_iot/{dir}/{dir2}/{file}")
 
 def delete_copied_files_from_openai_iot(open_ai_iot_path: str = "./openai_iot") -> None:
     """
@@ -33,6 +41,12 @@ def delete_copied_files_from_openai_iot(open_ai_iot_path: str = "./openai_iot") 
                     if file.endswith(".py") and file != "__init__.py":
                         print(f"Deleting {root2}/{file}")
                         os.remove(f"{root2}/{file}")
+                for dir2 in dirs2:
+                    for root3, dirs3, files3 in os.walk(f"{root2}/{dir2}"):
+                        for file in files3:
+                            if file.endswith(".txt"):
+                                print(f"Deleting {root3}/{file}")
+                                os.remove(f"{root3}/{file}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

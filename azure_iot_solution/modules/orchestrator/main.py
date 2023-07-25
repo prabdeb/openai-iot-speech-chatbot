@@ -1,10 +1,10 @@
 import signal
-import mic
+from .mic import MicrophoneThread
 
 
 if __name__ == "__main__":
     # Start a background thread to parse audio from the microphone.
-    mic = mic.MicrophoneThread(callback=None)
+    mic = MicrophoneThread(callback=None)
 
     def signal_handler(signal, frame):
         mic.stop()
