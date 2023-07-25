@@ -11,6 +11,8 @@ ExecStart=/usr/bin/python3 -m openai_iot.orchestrator.main
 # Disable Python's buffering of STDOUT and STDERR, so that output from the
 # service shows up immediately in systemd's logs
 Environment=PYTHONUNBUFFERED=1
+# You may need to set this environment variable if your ALSA library is not in the common path, else comment it out
+Environment=LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/alsa-lib
 
 # Automatically restart the service if it crashes
 Restart=on-failure
