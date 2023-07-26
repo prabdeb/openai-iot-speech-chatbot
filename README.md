@@ -6,7 +6,7 @@ You can also name your assistant, currently it is named as `Arya`, means `noble`
 
 ## Demo
 
-[TODO]
+![Demo](./docs/images/demo.mov)
 
 ## Architecture
 
@@ -25,3 +25,7 @@ For more details on the experiments and evaluation, please refer to [Experiments
 ## Development and Deployment
 
 To get started with this solution follow the documentation as mentioned in [Azure IoT Solution](./azure_iot_solution/README.md).
+
+## Demo Hardware Setup
+
+![Demo Hardware](./docs/images/hardware.png)
