@@ -6,7 +6,7 @@ You can also name your assistant, currently it is named as `Arya`, means `noble`
 
 ## Demo
 
-https://github.com/prabdeb/openai-iot-speech-chatbot/assets/37529789/a91fbaf1-c9bf-4e0e-aae2-2de06077bf2a
+https://github.com/prabdeb/openai-iot-speech-chatbot/assets/37529789/3e2673c1-887e-4ef7-8ac5-d36d0f07de07
 
 ## Architecture
 
