@@ -1,6 +1,6 @@
-# OpenAI IoT Skill
+# OpenAI IoT Speech Chatbot
 
-This project demonstrates how to use OpenAI GPT3.5 model to build your personal assistant in IoT devices. Just like Alexa, Google Assistant, Siri, etc. but with your own skills, custom voice, and custom personality.
+This project demonstrates how to use OpenAI GPT model to build your personal assistant in IoT devices. Just like Alexa, Google Assistant, Siri, etc. but with your own skills, custom voice, and custom personality.
 
 You can also name your assistant, currently it is named as `Arya`, means `noble` in Sanskrit.
 
