@@ -10,7 +10,7 @@ https://github.com/prabdeb/openai-iot-speech-chatbot/assets/37529789/a91fbaf1-c9
 
 ## Architecture
 
-[TODO]
+![Architecture](./docs/images/architecture.png)
 
 ## Experiments and Evaluation
 
